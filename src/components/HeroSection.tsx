@@ -26,25 +26,25 @@ export function HeroSection() {
           className="font-bebas text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-wider mb-6 animate-fade-in-up"
           style={{ animationDelay: "0.3s" }}
         >
-          BUILD HARD.<br />
-          <span className="text-gradient-metal">TRAIN SMART.</span><br />
-          <span className="text-gradient-neon">BREAK LIMITS.</span>
+          ENERGY<br />
+          <span className="text-gradient-metal">BOOSTER</span><br />
+          <span className="text-cyan-400">SUPPLEMENTS</span>
         </h1>
         <p
           className="font-barlow text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up"
           style={{ animationDelay: "0.5s" }}
         >
-          Elite guidance • Proven results • Industrial-grade equipment
+          Fuel your muscles, build your power. Premium grade supplements for elite performance.
         </p>
         <div
           className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
           style={{ animationDelay: "0.7s" }}
         >
           <Button variant="hero" size="xl">
-            Join The Ranks
+            Shop Now
           </Button>
-          <Button variant="neon" size="xl">
-            View Programs
+          <Button variant="outline" size="xl" className="border-cyan-500 text-cyan-500 hover:bg-cyan-500/10">
+            View Articles
           </Button>
         </div>
       </div>

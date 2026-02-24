@@ -15,33 +15,32 @@
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 92%;
 
-    --primary: 0 85% 50%;
+    --primary: 195 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 14%;
+    --secondary: 220 20% 14%;
     --secondary-foreground: 0 0% 85%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 145 80% 42%;
+    --accent: 195 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 16%;
-    --input: 0 0% 16%;
-    --ring: 0 85% 50%;
+    --border: 220 15% 16%;
+    --input: 220 15% 16%;
+    --ring: 195 100% 50%;
 
     --radius: 0.25rem;
 
-    --metal: 0 0% 30%;
-    --metal-light: 0 0% 45%;
-    --metal-dark: 0 0% 18%;
-    --neon-red: 0 85% 50%;
-    --neon-green: 145 80% 42%;
-    --neon-blue: 220 90% 55%;
+    --metal: 220 10% 30%;
+    --metal-light: 220 10% 45%;
+    --metal-dark: 220 10% 18%;
+    --neon-blue: 195 100% 50%;
+    --neon-cyan: 180 100% 50%;
     --charcoal: 0 0% 10%;
     --graphite: 0 0% 20%;
 
@@ -65,7 +64,12 @@
     @apply bg-background text-foreground font-barlow antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bebas tracking-wider;
   }
 
@@ -75,7 +79,10 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -86,61 +93,53 @@
 @layer utilities {
   .text-gradient-metal {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      135deg,
-      hsl(0 0% 70%) 0%,
-      hsl(0 0% 95%) 40%,
-      hsl(0 0% 60%) 60%,
-      hsl(0 0% 85%) 100%
-    );
+    background-image: linear-gradient(135deg,
+        hsl(0 0% 70%) 0%,
+        hsl(0 0% 95%) 40%,
+        hsl(0 0% 60%) 60%,
+        hsl(0 0% 85%) 100%);
   }
 
   .text-gradient-neon {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      90deg,
-      hsl(0 85% 50%) 0%,
-      hsl(25 90% 55%) 100%
-    );
+    background-image: linear-gradient(90deg,
+        hsl(0 85% 50%) 0%,
+        hsl(25 90% 55%) 100%);
   }
 
   .bg-metal-gradient {
-    background: linear-gradient(
-      135deg,
-      hsl(0 0% 12%) 0%,
-      hsl(0 0% 8%) 50%,
-      hsl(0 0% 14%) 100%
-    );
+    background: linear-gradient(135deg,
+        hsl(0 0% 12%) 0%,
+        hsl(0 0% 8%) 50%,
+        hsl(0 0% 14%) 100%);
   }
 
   .bg-metal-shine {
-    background: linear-gradient(
-      110deg,
-      hsl(0 0% 10%) 0%,
-      hsl(0 0% 18%) 45%,
-      hsl(0 0% 25%) 50%,
-      hsl(0 0% 18%) 55%,
-      hsl(0 0% 10%) 100%
-    );
+    background: linear-gradient(110deg,
+        hsl(0 0% 10%) 0%,
+        hsl(0 0% 18%) 45%,
+        hsl(0 0% 25%) 50%,
+        hsl(0 0% 18%) 55%,
+        hsl(0 0% 10%) 100%);
   }
 
   .border-metal {
     border-color: hsl(0 0% 22%);
   }
 
-  .shadow-neon-red {
-    box-shadow: 0 0 20px hsl(0 85% 50% / 0.3),
-                0 0 60px hsl(0 85% 50% / 0.1);
+  .shadow-neon-blue {
+    box-shadow: 0 0 20px hsl(195 100% 50% / 0.3),
+      0 0 60px hsl(195 100% 50% / 0.1);
   }
 
-  .shadow-neon-green {
-    box-shadow: 0 0 20px hsl(145 80% 42% / 0.3),
-                0 0 60px hsl(145 80% 42% / 0.1);
+  .shadow-neon-cyan {
+    box-shadow: 0 0 20px hsl(180 100% 50% / 0.3),
+      0 0 60px hsl(180 100% 50% / 0.1);
   }
 
-  .glow-red {
-    text-shadow: 0 0 20px hsl(0 85% 50% / 0.5),
-                 0 0 40px hsl(0 85% 50% / 0.2);
+  .glow-blue {
+    text-shadow: 0 0 20px hsl(195 100% 50% / 0.5),
+      0 0 40px hsl(195 100% 50% / 0.2);
   }
 
   .animate-pulse-glow {
@@ -159,14 +158,12 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      hsl(0 0% 100% / 0.05) 45%,
-      hsl(0 0% 100% / 0.12) 50%,
-      hsl(0 0% 100% / 0.05) 55%,
-      transparent 100%
-    );
+    background: linear-gradient(90deg,
+        transparent 0%,
+        hsl(0 0% 100% / 0.05) 45%,
+        hsl(0 0% 100% / 0.12) 50%,
+        hsl(0 0% 100% / 0.05) 55%,
+        transparent 100%);
     transform: translateX(-100%) rotate(25deg);
     transition: transform 0.6s ease;
     pointer-events: none;
@@ -178,13 +175,16 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 15px hsl(0 85% 50% / 0.3),
-                0 0 30px hsl(0 85% 50% / 0.1);
+      0 0 30px hsl(0 85% 50% / 0.1);
   }
+
   50% {
     box-shadow: 0 0 25px hsl(0 85% 50% / 0.5),
-                0 0 50px hsl(0 85% 50% / 0.2);
+      0 0 50px hsl(0 85% 50% / 0.2);
   }
 }
 
@@ -193,6 +193,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -200,8 +201,15 @@
 }
 
 @keyframes countUp {
-  from { opacity: 0; transform: scale(0.5); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .animate-fade-in-up {

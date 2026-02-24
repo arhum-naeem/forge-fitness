@@ -1,21 +1,21 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Quote } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const testimonials = [
+const articles = [
   {
-    quote: "This place changed everything. The intensity, the coaches, the culture — it's not a gym, it's a proving ground.",
-    name: "DEREK M.",
-    result: "Lost 45 lbs in 6 months",
+    title: "Optimizing your performance in every session",
+    excerpt: "Learn how to fuel your body for maximum output and sustainable growth.",
+    category: "Training",
   },
   {
-    quote: "I've trained at dozens of gyms. Nothing comes close to the equipment quality and coaching expertise here.",
-    name: "SARAH K.",
-    result: "Competed in first powerlifting meet",
+    title: "The science of recovery: Why rest is part of training",
+    excerpt: "Discover the metabolic processes that rebuild your muscles while you sleep.",
+    category: "Science",
   },
   {
-    quote: "The data tracking and personalized programming took my training from guesswork to science. PR after PR.",
-    name: "JAMES L.",
-    result: "Added 100 lbs to total in 4 months",
+    title: "Nutritional timing: When to take your supplements",
+    excerpt: "Maximize the efficiency of your Inzymo products with proper timing.",
+    category: "Nutrition",
   },
 ];
 
@@ -23,36 +23,34 @@ export function TestimonialsSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="testimonials" className="py-24 bg-metal-gradient">
+    <section id="articles" className="py-24">
       <div className="container px-4">
         <div ref={ref} className={`text-center mb-16 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}>
-          <p className="font-barlow-condensed text-sm uppercase tracking-[0.3em] text-primary mb-3">Testimonials</p>
-          <h2 className="font-bebas text-5xl md:text-6xl tracking-wider text-foreground">FORGED IN IRON</h2>
+          <p className="font-barlow-condensed text-sm uppercase tracking-[0.3em] text-cyan-400 mb-3">Recent Articles</p>
+          <h2 className="font-bebas text-5xl md:text-6xl tracking-wider text-foreground">ARTICLES</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => {
-            const { ref: cardRef, isVisible: cardVisible } = useScrollAnimation();
-            return (
-              <div
-                key={t.name}
-                ref={cardRef}
-                className={`relative bg-card border border-border p-8 transition-all duration-500 hover:border-primary/30 ${
-                  cardVisible ? "animate-fade-in-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${i * 0.15}s` }}
-              >
-                <Quote className="w-8 h-8 text-primary/30 mb-4" />
-                <blockquote className="font-barlow text-secondary-foreground leading-relaxed mb-6 italic">
-                  "{t.quote}"
-                </blockquote>
-                <div className="border-t border-border pt-4">
-                  <p className="font-bebas text-lg tracking-wider text-foreground">{t.name}</p>
-                  <p className="font-barlow text-sm text-accent">{t.result}</p>
-                </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {articles.map((article, i) => (
+            <div
+              key={article.title}
+              className="group bg-card border border-border overflow-hidden hover:border-cyan-500/40 transition-all duration-300"
+            >
+              <div className="aspect-video bg-metal-gradient flex items-center justify-center p-4">
+                <span className="text-muted-foreground text-xs uppercase tracking-widest font-bebas">Article Cover</span>
               </div>
-            );
-          })}
+              <div className="p-6">
+                <span className="text-[10px] uppercase tracking-widest text-cyan-400 font-barlow-condensed mb-2 block">{article.category}</span>
+                <h3 className="font-bebas text-xl tracking-wider text-foreground mb-3 group-hover:text-cyan-400 transition-colors">
+                  {article.title}
+                </h3>
+                <p className="font-barlow text-sm text-muted-foreground mb-6">
+                  {article.excerpt}
+                </p>
+                <Button variant="link" className="p-0 h-auto text-cyan-400 hover:text-cyan-300">Read more →</Button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
