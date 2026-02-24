@@ -6,13 +6,13 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { label: "Inspiration", href: "#" },
-    { label: "Quality and Research", href: "#" },
-    { label: "Events", href: "#" },
+    { label: "Inspiration", href: "#inspiration" },
+    { label: "Research", href: "#research" },
+    { label: "Benefits", href: "#benefits" },
+    { label: "Science", href: "#science" },
     { label: "Supplement", href: "#products" },
-    { label: "Gift Cards", href: "#" },
     { label: "Articles", href: "#articles" },
-    { label: "Member program", href: "#" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (

@@ -1,43 +1,43 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Dumbbell, Users, TrendingUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import equipmentImg from "@/assets/equipment.webp";
+import { Zap, Activity, Microscope, FlaskConical } from "lucide-react";
 
-const features = [
+const benefits = [
   {
-    icon: Dumbbell,
-    title: "100% PURE",
-    description: "Pure whey protein isolate. No fillers, no additives. Just raw power.",
+    icon: Activity,
+    title: "Strengthen Muscles",
+    description: "Supports lean muscle maintenance and recovery with high-quality protein collagen.",
+    side: "left" as const,
   },
   {
-    icon: Users,
-    title: "ZERO SUGAR",
-    description: "Keto-friendly and perfect for lean muscle growth without the unnecessary carbs.",
+    icon: FlaskConical,
+    title: "Extend Vitality",
+    description: "Promotes healthy aging by supporting joints, skin firmness, and overall vitality.",
+    side: "left" as const,
   },
   {
-    icon: TrendingUp,
-    title: "MAX ABSORPTION",
-    description: "Micro-filtered for rapid digestion and immediate muscle recovery support.",
+    icon: Microscope,
+    title: "Lab Tested",
+    description: "Clinically tested for purity, safety, and effectiveness you can trust.",
+    side: "right" as const,
+  },
+  {
+    icon: Zap,
+    title: "Boost Energy",
+    description: "Helps maintain daily energy levels supports an active lifestyle.",
+    side: "right" as const,
   },
 ];
 
-function FeatureCard({ icon: Icon, title, description, index }: typeof features[0] & { index: number }) {
-  const { ref, isVisible } = useScrollAnimation();
-
+function BenefitItem({ icon: Icon, title, description }: typeof benefits[0]) {
   return (
-    <div
-      ref={ref}
-      className={`group relative bg-metal-gradient border border-border p-8 transition-all duration-500 hover:border-primary/40 hover-metal-sheen ${isVisible ? "animate-fade-in-up" : "opacity-0"
-        }`}
-      style={{ animationDelay: `${index * 0.15}s` }}
-    >
-      <div className="mb-6 inline-flex items-center justify-center w-14 h-14 border border-primary/30 bg-primary/5 text-primary transition-colors group-hover:bg-primary/10">
-        <Icon className="w-7 h-7" />
+    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4">
+      <div className="w-12 h-12 rounded-full border border-primary/20 bg-primary/10 flex items-center justify-center text-primary">
+        <Icon className="w-6 h-6" />
       </div>
-      <h3 className="font-bebas text-2xl tracking-wider mb-3 text-foreground">{title}</h3>
-      <p className="font-barlow text-muted-foreground leading-relaxed">{description}</p>
-      {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-500 group-hover:w-full" />
+      <div>
+        <h3 className="font-barlow-condensed text-xl font-semibold text-foreground mb-2">{title}</h3>
+        <p className="font-barlow text-sm text-muted-foreground leading-relaxed max-w-xs">{description}</p>
+      </div>
     </div>
   );
 }
@@ -45,42 +45,49 @@ function FeatureCard({ icon: Icon, title, description, index }: typeof features[
 export function FeaturesSection() {
   const { ref, isVisible } = useScrollAnimation();
 
+  const leftBenefits = benefits.filter(b => b.side === "left");
+  const rightBenefits = benefits.filter(b => b.side === "right");
+
   return (
-    <section className="py-24 relative">
+    <section id="benefits" className="py-24 bg-black">
       <div className="container px-4">
-        {/* Section header */}
-        <div ref={ref} className={`text-center mb-16 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}>
-          <p className="font-barlow-condensed text-sm uppercase tracking-[0.3em] text-primary mb-3">Premium Supplements</p>
-          <h2 className="font-bebas text-5xl md:text-6xl tracking-wider text-foreground">INZYMO ISOLATE WHEY</h2>
-        </div>
+        <h2 className="font-barlow-condensed text-4xl md:text-5xl text-center text-foreground mb-20 uppercase tracking-widest">
+          COLLAGEN BENEFITS
+        </h2>
 
-        {/* Feature cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {features.map((feature, i) => (
-            <FeatureCard key={feature.title} {...feature} index={i} />
-          ))}
-        </div>
-
-        {/* Product showcase */}
-        <div className="relative overflow-hidden border border-border bg-metal-gradient p-12 flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-1">
-            <h3 className="font-bebas text-4xl mb-4 text-cyan-400">SUPPLEMENT OUR PROTEIN</h3>
-            <p className="font-barlow text-muted-foreground mb-6">
-              It is a dietary supplement based on 100% pure whey protein isolate, without flavors or additives.
-              32 grams of protein per serving.
-            </p>
-            <ul className="space-y-2 text-sm font-barlow-condensed text-muted-foreground mb-8">
-              <li>• Low fat</li>
-              <li>• Without sugar</li>
-              <li>• No preservatives</li>
-              <li>• Pure amino acids</li>
-            </ul>
-            <Button variant="hero">Buy Now - $45.99</Button>
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 max-w-5xl mx-auto">
+          {/* Left Column */}
+          <div className="space-y-16">
+            {leftBenefits.map((benefit, i) => (
+              <BenefitItem key={i} {...benefit} />
+            ))}
           </div>
-          <div className="flex-1 flex justify-center">
-            <div className="w-64 h-80 bg-zinc-900 border border-border shadow-neon-blue flex items-center justify-center p-4">
-              <span className="text-muted-foreground text-center">Inzymo Whey Isolate<br />(Image Placeholder)</span>
+
+          {/* Center Column - Product Image */}
+          <div ref={ref} className={`relative flex justify-center ${isVisible ? "animate-fade-in" : "opacity-0"}`}>
+            <div className="absolute inset-0 bg-primary/20 rounded-full blur-[100px] opacity-20" />
+            <div className="relative w-full max-w-[380px] aspect-square flex items-center justify-center">
+              <img
+                src="/collagen-jar.png"
+                alt="Inzymo Protein Collagen"
+                className="w-full h-full object-contain scale-125 drop-shadow-[0_0_30px_rgba(151,255,51,0.2)]"
+              />
             </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="space-y-16 md:text-right">
+            {rightBenefits.map((benefit, i) => (
+              <div key={i} className="flex flex-col items-center md:items-end text-center md:text-right gap-4">
+                <div className="w-12 h-12 rounded-full border border-primary/20 bg-primary/10 flex items-center justify-center text-primary">
+                  <benefit.icon className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="font-barlow-condensed text-xl font-semibold text-foreground mb-2">{benefit.title}</h3>
+                  <p className="font-barlow text-sm text-muted-foreground leading-relaxed max-w-xs">{benefit.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

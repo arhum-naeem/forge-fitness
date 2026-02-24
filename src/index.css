@@ -15,32 +15,32 @@
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 92%;
 
-    --primary: 195 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 90 100% 50%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 220 20% 14%;
-    --secondary-foreground: 0 0% 85%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 12%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 195 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 90 100% 50%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 16%;
-    --input: 220 15% 16%;
-    --ring: 195 100% 50%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 90 100% 50%;
 
-    --radius: 0.25rem;
+    --radius: 0.5rem;
 
-    --metal: 220 10% 30%;
-    --metal-light: 220 10% 45%;
-    --metal-dark: 220 10% 18%;
+    --metal: 0 0% 20%;
+    --metal-light: 0 0% 30%;
+    --metal-dark: 0 0% 10%;
+    --neon-green: 90 100% 50%;
     --neon-blue: 195 100% 50%;
-    --neon-cyan: 180 100% 50%;
     --charcoal: 0 0% 10%;
     --graphite: 0 0% 20%;
 

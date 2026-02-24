@@ -59,8 +59,8 @@ export default {
           dark: "hsl(var(--metal-dark))",
         },
         neon: {
+          green: "hsl(var(--neon-green))",
           blue: "hsl(var(--neon-blue))",
-          cyan: "hsl(var(--neon-cyan))",
         },
         charcoal: "hsl(var(--charcoal))",
         graphite: "hsl(var(--graphite))",

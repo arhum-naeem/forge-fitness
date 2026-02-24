@@ -5,14 +5,14 @@ export function CTASection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="py-24 bg-card/50 border-t border-border">
+    <section id="contact" className="py-24 bg-card/50 border-t border-border">
       <div className="container px-4">
         <div ref={ref} className={`text-center mb-12 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}>
           <h2 className="font-bebas text-5xl tracking-wider text-foreground">
             IN TOUCH <span className="text-cyan-400">GET</span>
           </h2>
           <p className="font-barlow text-muted-foreground mt-2">
-            Leave you about name to representative from our team will get back to you answer your positive.
+            Leave your name and an expert representative from our team will get back to you with all the answers.
           </p>
         </div>
 
