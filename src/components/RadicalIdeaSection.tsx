@@ -4,7 +4,7 @@ export function RadicalIdeaSection() {
     const { ref, isVisible } = useScrollAnimation();
 
     return (
-        <section className="py-24 bg-white text-[#002b5c]">
+        <section id="research" className="py-24 bg-white text-[#002b5c]">
             <div className="container px-4 flex flex-col md:flex-row items-center gap-16">
                 <div className="flex-1 flex justify-center">
                     <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden flex items-center justify-center">
