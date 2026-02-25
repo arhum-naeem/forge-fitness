@@ -118,7 +118,7 @@ export function TrainersSection() {
             {["All", "Performance", "Muscle", "Recovery", "Wellness"].map((cat) => (
               <button
                 key={cat}
-                className={`px-6 py-2 rounded-full border text-xs font-barlow font-medium transition-all ${activeCategory === cat || (cat === "All" && activeCategory === "Weight Loss")
+                className={`px-6 py-2 rounded-full border text-xs font-barlow font-medium transition-all ${activeCategory === cat
                   ? "bg-white text-black border-white"
                   : "border-border text-muted-foreground hover:border-primary/40"
                   }`}

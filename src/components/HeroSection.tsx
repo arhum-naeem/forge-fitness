@@ -18,7 +18,7 @@ export function HeroSection() {
           >
             ENERGY<br />
             <span className="text-gradient-metal">BOOSTER</span><br />
-            <span className="text-cyan-400">SUPPLEMENTS</span>
+            <span className="text-primary">SUPPLEMENTS</span>
           </h1>
           <p
             className="font-barlow text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-10 animate-fade-in-up"
@@ -33,7 +33,7 @@ export function HeroSection() {
             <Button variant="hero" size="xl">
               Shop Now
             </Button>
-            <Button variant="outline" size="xl" className="border-cyan-500 text-cyan-500 hover:bg-cyan-500/10">
+            <Button variant="outline" size="xl" className="border-primary text-primary hover:bg-primary/10">
               View Articles
             </Button>
           </div>
@@ -43,7 +43,7 @@ export function HeroSection() {
           <img
             src="/hero-spark.png"
             alt="Inzymo Spark"
-            className="w-full h-full object-contain drop-shadow-[0_0_80px_rgba(151,255,51,0.25)]"
+            className="w-full h-full object-contain drop-shadow-[0_0_80px_rgba(50,150,255,0.3)]"
           />
         </div>
       </div>

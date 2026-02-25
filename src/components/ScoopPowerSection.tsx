@@ -13,7 +13,7 @@ export function ScoopPowerSection() {
         <section id="science" className="py-24 bg-black relative overflow-hidden">
             <div className="container px-4 text-center">
                 <div ref={ref} className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`}>
-                    <h2 className="font-bebas text-4xl md:text-6xl tracking-wider text-[#d4af37] mb-2 uppercase">
+                    <h2 className="font-bebas text-4xl md:text-6xl tracking-wider text-primary mb-2 uppercase">
                         Maximum Power
                     </h2>
                     <h3 className="font-bebas text-5xl md:text-7xl tracking-widest text-white mb-6 uppercase">

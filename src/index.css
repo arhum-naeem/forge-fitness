@@ -15,7 +15,7 @@
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 92%;
 
-    --primary: 90 100% 50%;
+    --primary: 215 100% 50%;
     --primary-foreground: 0 0% 0%;
 
     --secondary: 0 0% 10%;
@@ -24,7 +24,7 @@
     --muted: 0 0% 12%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 90 100% 50%;
+    --accent: 215 100% 50%;
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,15 +32,15 @@
 
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 90 100% 50%;
+    --ring: 215 100% 50%;
 
     --radius: 0.5rem;
 
     --metal: 0 0% 20%;
     --metal-light: 0 0% 30%;
     --metal-dark: 0 0% 10%;
-    --neon-green: 90 100% 50%;
-    --neon-blue: 195 100% 50%;
+    --neon-green: 215 100% 50%;
+    --neon-blue: 215 100% 50%;
     --charcoal: 0 0% 10%;
     --graphite: 0 0% 20%;
 
@@ -74,7 +74,7 @@
   }
 
   ::selection {
-    background: hsl(0 85% 50% / 0.3);
+    background: hsl(195 100% 50% / 0.3);
     color: hsl(0 0% 100%);
   }
 
@@ -103,8 +103,8 @@
   .text-gradient-neon {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(90deg,
-        hsl(0 85% 50%) 0%,
-        hsl(25 90% 55%) 100%);
+        hsl(195 100% 50%) 0%,
+        hsl(210 100% 60%) 100%);
   }
 
   .bg-metal-gradient {
@@ -128,18 +128,18 @@
   }
 
   .shadow-neon-blue {
-    box-shadow: 0 0 20px hsl(195 100% 50% / 0.3),
-      0 0 60px hsl(195 100% 50% / 0.1);
+    box-shadow: 0 0 20px hsl(210 100% 50% / 0.4),
+      0 0 60px hsl(210 100% 50% / 0.2);
   }
 
   .shadow-neon-cyan {
-    box-shadow: 0 0 20px hsl(180 100% 50% / 0.3),
-      0 0 60px hsl(180 100% 50% / 0.1);
+    box-shadow: 0 0 20px hsl(195 100% 50% / 0.4),
+      0 0 60px hsl(195 100% 50% / 0.2);
   }
 
   .glow-blue {
-    text-shadow: 0 0 20px hsl(195 100% 50% / 0.5),
-      0 0 40px hsl(195 100% 50% / 0.2);
+    text-shadow: 0 0 20px hsl(210 100% 50% / 0.6),
+      0 0 40px hsl(210 100% 50% / 0.3);
   }
 
   .animate-pulse-glow {
@@ -178,13 +178,13 @@
 
   0%,
   100% {
-    box-shadow: 0 0 15px hsl(0 85% 50% / 0.3),
-      0 0 30px hsl(0 85% 50% / 0.1);
+    box-shadow: 0 0 15px hsl(210 100% 50% / 0.4),
+      0 0 30px hsl(210 100% 50% / 0.2);
   }
 
   50% {
-    box-shadow: 0 0 25px hsl(0 85% 50% / 0.5),
-      0 0 50px hsl(0 85% 50% / 0.2);
+    box-shadow: 0 0 25px hsl(210 100% 50% / 0.6),
+      0 0 50px hsl(210 100% 50% / 0.3);
   }
 }
 

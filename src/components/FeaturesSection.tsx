@@ -70,7 +70,7 @@ export function FeaturesSection() {
               <img
                 src="/collagen-jar.png"
                 alt="Inzymo Protein Collagen"
-                className="w-full h-full object-contain scale-125 drop-shadow-[0_0_30px_rgba(151,255,51,0.2)]"
+                className="w-full h-full object-contain scale-125 drop-shadow-[0_0_30px_rgba(50,150,255,0.3)]"
               />
             </div>
           </div>

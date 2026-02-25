@@ -9,7 +9,7 @@ export function CTASection() {
       <div className="container px-4">
         <div ref={ref} className={`text-center mb-12 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}>
           <h2 className="font-bebas text-5xl tracking-wider text-foreground">
-            IN TOUCH <span className="text-cyan-400">GET</span>
+            IN TOUCH <span className="text-primary">GET</span>
           </h2>
           <p className="font-barlow text-muted-foreground mt-2">
             Leave your name and an expert representative from our team will get back to you with all the answers.
